@@ -3,14 +3,16 @@ import logo from './white-logo.png';
 import Nav from './Components/Nav.js';
 import MainTitle from './Components/MainTitle.js';
 import AboutSection from './Components/AboutSection.js';
+import PortfolioPage from './Components/PortfolioPage.js';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      main: false,
-      about: false
+      main: true,
+      about: false,
+      portfolio: false
     }
   }
 
@@ -20,7 +22,8 @@ class App extends Component {
       this.setState({main: true})
     }
     this.setState({
-      about: false
+      about: false,
+      portfolio: false
     })
   }
 
@@ -30,7 +33,19 @@ class App extends Component {
       this.setState({about: true})
     }
     this.setState({
-      main: false
+      main: false,
+      portfolio: false
+    })
+  }
+
+  togglePortfolio = (e) => {
+    e.preventDefault()
+    if (this.state.portfolio === false) {
+      this.setState({portfolio: true})
+    }
+    this.setState({
+      main: false,
+      about: false
     })
   }
 
@@ -39,12 +54,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Nav toggleMain={this.toggleMain}
-          toggleAbout={this.toggleAbout} />
+          <Nav
+            toggleMain={this.toggleMain}
+            toggleAbout={this.toggleAbout}
+            togglePortfolio={this.togglePortfolio}/>
         </header>
         <main>
           {this.state.main ? <MainTitle /> : null}
           {this.state.about ? <AboutSection /> : null}
+          {this.state.portfolio ? <PortfolioPage /> : null}
         </main>
       </div>
     );
