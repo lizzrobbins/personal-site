@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class MainTitle extends Component {
   render() {
     return(
-      <main>
         <div className="main-intro">
           <p className="my-name">
             Lizz Robbins
@@ -12,7 +11,6 @@ class MainTitle extends Component {
             Full Stack Developer
           </p>
         </div>
-      </main>
     )
   }
 }
