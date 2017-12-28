@@ -36,8 +36,7 @@ body {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  margin-bottom: 0vh;
+  text-align: right;
 }
 
 .my-name, .my-handle {
@@ -47,4 +46,11 @@ body {
 
 .my-name {
   font-size: 10vh;
+  margin-top: 0vh;
+  margin-bottom: -2.5vh;
+}
+
+.my-handle {
+  font-size: 3vh;
+  margin-top: -2vh;
 }
