@@ -30,7 +30,7 @@ body {
   color: white;
 }
 
-.main-intro {
+.main-intro, .about-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,7 +39,7 @@ body {
   text-align: right;
 }
 
-.my-name, .my-handle {
+.my-name, .my-handle, .about-content {
   color: white;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
@@ -53,4 +53,10 @@ body {
 .my-handle {
   font-size: 3vh;
   margin-top: -2vh;
+}
+
+.about-container {
+  font-size: 3vh;
+  text-align: center;
+  padding: 10vh;
 }
